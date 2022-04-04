@@ -1,0 +1,30 @@
+2022-04-04 16:03:40,886 - __init__.py[line:46] - DEBUG: [ray] Forcing OMP_NUM_THREADS=1 to avoid performance degradation with many workers (issue #6998). You can override this by explicitly setting OMP_NUM_THREADS.
+2022-04-04 16:03:44,544 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-04 16:03:52,454 - log.py[line:11] - INFO: =========== Ray engine prepared =========== 
+2022-04-04 16:03:52,455 - log.py[line:11] - INFO: =========== ModelProxy initialized=========== 
+2022-04-04 16:03:55,246 - log.py[line:11] - INFO: =========== Trainer started =========== 
+2022-04-04 16:14:11,732 - __init__.py[line:46] - DEBUG: [ray] Forcing OMP_NUM_THREADS=1 to avoid performance degradation with many workers (issue #6998). You can override this by explicitly setting OMP_NUM_THREADS.
+2022-04-04 16:14:15,589 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-04 16:14:21,466 - log.py[line:11] - INFO: =========== Ray engine prepared =========== 
+2022-04-04 16:14:21,467 - log.py[line:11] - INFO: =========== ModelProxy initialized=========== 
+2022-04-04 16:14:24,741 - log.py[line:11] - INFO: =========== Trainer started =========== 
+2022-04-04 16:18:31,647 - __init__.py[line:46] - DEBUG: [ray] Forcing OMP_NUM_THREADS=1 to avoid performance degradation with many workers (issue #6998). You can override this by explicitly setting OMP_NUM_THREADS.
+2022-04-04 16:18:34,900 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-04 16:18:41,387 - log.py[line:11] - INFO: =========== Ray engine prepared =========== 
+2022-04-04 16:18:41,387 - log.py[line:11] - INFO: =========== ModelProxy initialized=========== 
+2022-04-04 16:18:45,434 - log.py[line:11] - INFO: =========== Trainer started =========== 
+2022-04-04 16:21:03,810 - __init__.py[line:46] - DEBUG: [ray] Forcing OMP_NUM_THREADS=1 to avoid performance degradation with many workers (issue #6998). You can override this by explicitly setting OMP_NUM_THREADS.
+2022-04-04 16:21:06,446 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-04 16:21:12,397 - log.py[line:11] - INFO: =========== Ray engine prepared =========== 
+2022-04-04 16:21:12,398 - log.py[line:11] - INFO: =========== ModelProxy initialized=========== 
+2022-04-04 16:21:15,223 - log.py[line:11] - INFO: =========== Trainer started =========== 
+2022-04-04 16:30:12,258 - __init__.py[line:46] - DEBUG: [ray] Forcing OMP_NUM_THREADS=1 to avoid performance degradation with many workers (issue #6998). You can override this by explicitly setting OMP_NUM_THREADS.
+2022-04-04 16:30:16,250 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-04 16:30:22,092 - log.py[line:11] - INFO: =========== Ray engine prepared =========== 
+2022-04-04 16:30:22,093 - log.py[line:11] - INFO: =========== ModelProxy initialized=========== 
+2022-04-04 16:30:27,647 - log.py[line:11] - INFO: =========== Trainer started =========== 
+2022-04-04 16:31:32,721 - __init__.py[line:46] - DEBUG: [ray] Forcing OMP_NUM_THREADS=1 to avoid performance degradation with many workers (issue #6998). You can override this by explicitly setting OMP_NUM_THREADS.
+2022-04-04 16:31:36,574 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-04 16:31:42,514 - log.py[line:11] - INFO: =========== Ray engine prepared =========== 
+2022-04-04 16:31:42,517 - log.py[line:11] - INFO: =========== ModelProxy initialized=========== 
+2022-04-04 16:31:45,447 - log.py[line:11] - INFO: =========== Trainer started =========== 

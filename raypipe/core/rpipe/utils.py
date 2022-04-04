@@ -1,8 +1,6 @@
 import ray
 from ray.train import Trainer
-import ray.train as train
 
-from tensorflow.python.keras.callbacks import Callback
 from raypipe.core.data_model import RayConfig, TrainerConfig
 
 
@@ -20,6 +18,4 @@ def build_ray_trainer(trainer_cfg:TrainerConfig):
                     num_workers=trainer_cfg.num_workers,
                     use_gpu=trainer_cfg.use_gpu)
 
-class TrainReportCallback(Callback):
-    def on_epoch_end(self, epoch, logs=None):
-        train.report(**logs)
+

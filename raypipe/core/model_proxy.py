@@ -1,9 +1,12 @@
+import os
+
 from raypipe import logger
 from raypipe.core import rpipe
 import tensorflow as tf
 
 from raypipe.core.data_model import LearningConfig
-from raypipe.core.rpipe.utils import build_ray_trainer, TrainReportCallback
+from raypipe.core.rpipe.call_back_func import DistModelSaveCallBack
+from raypipe.core.rpipe.utils import build_ray_trainer
 
 
 @rpipe.init
@@ -50,18 +53,36 @@ class ModelProxy:
         trainer_config = general_config.get("trainer_config")
         data_cfg= general_config.get("data_cfg")
 
+        strategy = tf.distribute.experimental.MultiWorkerMirroredStrategy()
+        logger.info('=========== strategy initialized =========== ')
+
+        with strategy.scope():
+            multi_worker_model = self.model_strategy_func(learning_config.dict())
+
+        logger.info('=========== Model built =========== ')
+
         global_batch_size = learning_config.batch_size * trainer_config.num_workers
         batch_dataset = self.data_generator_func(data_cfg,global_batch_size)
 
-        strategy = tf.distribute.experimental.MultiWorkerMirroredStrategy()
-        with strategy.scope():
-            multi_worker_model = self.model_strategy_func(learning_config.json())
+        logger.info('=========== Dataset downloaded =========== ')
+
+        if not os.path.exists("/tmp/training"):
+            os.mkdir("/tmp/training")
+
+        checkpoint_path = "/tmp/training/cp-{epoch:04d}.ckpt"
+
+        epoch_call_back=DistModelSaveCallBack(filepath=checkpoint_path,
+                                              save_weights_only=True,
+                                              save_best_only=True,
+                                              save_freq=5 * learning_config.batch_size,
+                                              verbose=1)
 
         history = multi_worker_model.fit(
             batch_dataset,
-            epochs=self.learning_config.epochs,
-            steps_per_epoch=self.learning_config.steps_per_epoch,
-            callbacks=[TrainReportCallback()])
+            epochs=learning_config.epochs,
+            steps_per_epoch=learning_config.steps_per_epoch,
+            callbacks=[epoch_call_back])
+
         results = history.history
         return results
 

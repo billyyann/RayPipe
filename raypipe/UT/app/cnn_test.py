@@ -2,7 +2,6 @@ import unittest
 
 from raypipe.applications.cnn import CNN
 
-
 class CNNTester(unittest.TestCase):
     def test_cnn_remote_train(self):
         general_cfg={
