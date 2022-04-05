@@ -28,3 +28,10 @@
 2022-04-04 16:31:42,514 - log.py[line:11] - INFO: =========== Ray engine prepared =========== 
 2022-04-04 16:31:42,517 - log.py[line:11] - INFO: =========== ModelProxy initialized=========== 
 2022-04-04 16:31:45,447 - log.py[line:11] - INFO: =========== Trainer started =========== 
+2022-04-05 18:27:32,521 - __init__.py[line:46] - DEBUG: [ray] Forcing OMP_NUM_THREADS=1 to avoid performance degradation with many workers (issue #6998). You can override this by explicitly setting OMP_NUM_THREADS.
+2022-04-05 18:27:36,206 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-05 18:29:06,689 - __init__.py[line:46] - DEBUG: [ray] Forcing OMP_NUM_THREADS=1 to avoid performance degradation with many workers (issue #6998). You can override this by explicitly setting OMP_NUM_THREADS.
+2022-04-05 18:29:10,925 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-05 18:29:21,522 - log.py[line:11] - INFO: =========== Ray engine prepared =========== 
+2022-04-05 18:29:21,525 - log.py[line:11] - INFO: =========== ModelProxy initialized=========== 
+2022-04-05 18:29:24,146 - log.py[line:11] - INFO: =========== Trainer started =========== 

@@ -1,7 +1,10 @@
+import os
+import inspect
 import ray
 
 from raypipe import logger
 from raypipe.core.data_model import RayConfig, TrainerConfig, LearningConfig
+from raypipe.core.exception import AutowireException
 from raypipe.core.rpipe.utils import start_ray
 
 
@@ -52,3 +55,18 @@ def is_init(func):
         return func
 
     return wrapper
+
+
+def bean(class_name):
+    def wrapper(func, **kargs):
+        arg_spec = inspect.getfullargspec(func)
+        cls=arg_spec.defaults[0]
+        if class_name:
+            return [klass for klass in cls.__subclasses__() if klass.__name__ == class_name][0]
+
+        for klass in cls.__subclasses__():
+            if klass.__name__ in os.environ:
+                return klass
+        raise AutowireException("Failed to autowire implementation for class %s "%cls.__name__)
+    return wrapper
+

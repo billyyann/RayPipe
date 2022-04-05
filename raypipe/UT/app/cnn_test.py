@@ -24,3 +24,4 @@ class CNNTester(unittest.TestCase):
         }
         cnn=CNN(**general_cfg)
         cnn.train(method="remote")
+

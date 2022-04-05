@@ -1,0 +1,2 @@
+class AutowireException(NotImplementedError):
+    pass
