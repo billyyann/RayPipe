@@ -69,14 +69,8 @@ class ModelProxy:
         if not os.path.exists("/tmp/training"):
             os.mkdir("/tmp/training")
 
-        checkpoint_path = "/tmp/training/cp-{epoch:04d}.ckpt"
-
-        epoch_call_back=DistModelSaveCallBack(filepath=checkpoint_path,
-                                              save_weights_only=True,
-                                              save_best_only=True,
-                                              save_freq=5 * learning_config.batch_size,
+        epoch_call_back=DistModelSaveCallBack(save_freq=learning_config.batch_size,
                                               verbose=1)
-
         history = multi_worker_model.fit(
             batch_dataset,
             epochs=learning_config.epochs,

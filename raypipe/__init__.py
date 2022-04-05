@@ -1,2 +1,2 @@
 from .log import Logger
-logger=Logger("raypipe")
+logger=Logger("pipe")

@@ -6,7 +6,8 @@ class CNNTester(unittest.TestCase):
     def test_cnn_remote_train(self):
         general_cfg={
             "ray_cfg":{
-                "address":"ray://172.27.69.28:32071",
+                "address":'127.0.0.1:6379',
+                # "address":"ray://172.27.69.28:32071",
                 "redis_password" : '5241590000000000',
                 "runtime_env":{}
             },
@@ -18,7 +19,7 @@ class CNNTester(unittest.TestCase):
             "learning_cfg":{
                 "lr":1e-3,
                 "batch_size": 10,
-                "epochs": 3,
+                "epochs": 15,
                 "steps_per_epoch": 3
             }
         }

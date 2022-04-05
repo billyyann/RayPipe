@@ -10,7 +10,8 @@ import numpy as np
 import ray.train as train
 from ray.train import Trainer
 import tensorflow as tf
-from raypipe.core.rpipe.utils import TrainReportCallback
+
+from raypipe.core.rpipe.callback_func import DistModelSaveCallBack
 
 
 def mnist_dataset(batch_size):
@@ -62,7 +63,7 @@ def train_func(config):
         multi_worker_dataset,
         epochs=epochs,
         steps_per_epoch=steps_per_epoch,
-        callbacks=[TrainReportCallback()])
+        callbacks=[DistModelSaveCallBack()])
     results = history.history
     return results
 

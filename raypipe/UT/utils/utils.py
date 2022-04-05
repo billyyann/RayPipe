@@ -27,3 +27,7 @@ class UtilsTest(unittest.TestCase):
         c = io.BytesIO(b)
         # view[2:4] = b"56"
         print(c.read().decode())
+
+    def test_index_str(self):
+        s="/tmp/training/cp-0014.ckpt"
+        print(s.index("/"))

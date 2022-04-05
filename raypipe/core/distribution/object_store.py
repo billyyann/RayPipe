@@ -5,6 +5,9 @@ from abc import ABC
 
 import sys
 
+from raypipe import logger
+
+
 def _strip_slash(path):
     contents=path.split("/")
     contents=[c for c in contents if len(c)]
@@ -57,7 +60,14 @@ class FileSystemObjectStore(ObjectStore):
         pass
 
     def upload(self, object_path: ObjectPath, file:bytes):
-        pass
+        #todo fix No such file or directory: '/tmp/object_store/95c3cae6-b4fc-11ec-bbfd/tmp/training'
+        parent_path=os.path.dirname(object_path.get_path())
+        if not os.path.exists(parent_path):
+            os.mkdir(parent_path)
+        with open(object_path.get_path()+".zip","wb") as f:
+            f.write(file)
+
+        logger.info("=========== checkpoint saved to %s =========== "%object_path.get_path())
 
     def is_exist(self, object_path: ObjectPath):
         pass
