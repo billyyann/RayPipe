@@ -20,3 +20,49 @@
 2022-04-06 00:22:17,865 - log.py[line:11] - INFO: =========== Ray engine prepared =========== 
 2022-04-06 00:22:17,865 - log.py[line:11] - INFO: =========== ModelProxy initialized=========== 
 2022-04-06 00:22:19,938 - log.py[line:11] - INFO: =========== Trainer started =========== 
+2022-04-08 23:44:56,867 - __init__.py[line:46] - DEBUG: [ray] Forcing OMP_NUM_THREADS=1 to avoid performance degradation with many workers (issue #6998). You can override this by explicitly setting OMP_NUM_THREADS.
+2022-04-08 23:44:59,923 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:45:01,042 - worker.py[line:817] - DEBUG: Automatically increasing RLIMIT_NOFILE to max value of 9223372036854775807
+2022-04-08 23:45:01,043 - worker.py[line:861] - INFO: Connecting to existing Ray cluster at address: 127.0.0.1:6379
+2022-04-08 23:45:51,941 - __init__.py[line:46] - DEBUG: [ray] Forcing OMP_NUM_THREADS=1 to avoid performance degradation with many workers (issue #6998). You can override this by explicitly setting OMP_NUM_THREADS.
+2022-04-08 23:45:54,716 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:45:55,853 - worker.py[line:817] - DEBUG: Automatically increasing RLIMIT_NOFILE to max value of 9223372036854775807
+2022-04-08 23:45:55,853 - worker.py[line:861] - INFO: Connecting to existing Ray cluster at address: 127.0.0.1:6379
+2022-04-08 23:45:56,246 - log.py[line:11] - INFO: =========== Ray engine prepared =========== 
+2022-04-08 23:45:56,247 - log.py[line:11] - INFO: =========== ModelProxy initialized=========== 
+2022-04-08 23:45:58,063 - log.py[line:11] - INFO: =========== Trainer started =========== 
+2022-04-08 23:47:47,397 - __init__.py[line:46] - DEBUG: [ray] Forcing OMP_NUM_THREADS=1 to avoid performance degradation with many workers (issue #6998). You can override this by explicitly setting OMP_NUM_THREADS.
+2022-04-08 23:47:50,040 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:47:50,785 - worker.py[line:817] - DEBUG: Automatically increasing RLIMIT_NOFILE to max value of 9223372036854775807
+2022-04-08 23:47:50,785 - worker.py[line:861] - INFO: Connecting to existing Ray cluster at address: 127.0.0.1:6379
+2022-04-08 23:47:51,119 - log.py[line:11] - INFO: =========== Ray engine prepared =========== 
+2022-04-08 23:47:51,119 - log.py[line:11] - INFO: =========== ModelProxy initialized=========== 
+2022-04-08 23:47:53,031 - log.py[line:11] - INFO: =========== Trainer started =========== 
+2022-04-08 23:49:24,593 - __init__.py[line:46] - DEBUG: [ray] Forcing OMP_NUM_THREADS=1 to avoid performance degradation with many workers (issue #6998). You can override this by explicitly setting OMP_NUM_THREADS.
+2022-04-08 23:49:27,599 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:49:28,731 - worker.py[line:817] - DEBUG: Automatically increasing RLIMIT_NOFILE to max value of 9223372036854775807
+2022-04-08 23:49:28,731 - worker.py[line:861] - INFO: Connecting to existing Ray cluster at address: 127.0.0.1:6379
+2022-04-08 23:49:29,077 - log.py[line:11] - INFO: =========== Ray engine prepared =========== 
+2022-04-08 23:49:29,077 - log.py[line:11] - INFO: =========== ModelProxy initialized=========== 
+2022-04-08 23:49:31,185 - log.py[line:11] - INFO: =========== Trainer started =========== 
+2022-04-08 23:51:33,327 - __init__.py[line:46] - DEBUG: [ray] Forcing OMP_NUM_THREADS=1 to avoid performance degradation with many workers (issue #6998). You can override this by explicitly setting OMP_NUM_THREADS.
+2022-04-08 23:51:35,513 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:51:36,244 - worker.py[line:817] - DEBUG: Automatically increasing RLIMIT_NOFILE to max value of 9223372036854775807
+2022-04-08 23:51:36,244 - worker.py[line:861] - INFO: Connecting to existing Ray cluster at address: 127.0.0.1:6379
+2022-04-08 23:51:36,579 - log.py[line:11] - INFO: =========== Ray engine prepared =========== 
+2022-04-08 23:51:36,579 - log.py[line:11] - INFO: =========== ModelProxy initialized=========== 
+2022-04-08 23:51:38,247 - log.py[line:11] - INFO: =========== Trainer started =========== 
+2022-04-08 23:52:44,729 - __init__.py[line:46] - DEBUG: [ray] Forcing OMP_NUM_THREADS=1 to avoid performance degradation with many workers (issue #6998). You can override this by explicitly setting OMP_NUM_THREADS.
+2022-04-08 23:52:47,057 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:52:47,829 - worker.py[line:817] - DEBUG: Automatically increasing RLIMIT_NOFILE to max value of 9223372036854775807
+2022-04-08 23:52:47,829 - worker.py[line:861] - INFO: Connecting to existing Ray cluster at address: 127.0.0.1:6379
+2022-04-08 23:52:48,167 - log.py[line:11] - INFO: =========== Ray engine prepared =========== 
+2022-04-08 23:52:48,167 - log.py[line:11] - INFO: =========== ModelProxy initialized=========== 
+2022-04-08 23:52:49,828 - log.py[line:11] - INFO: =========== Trainer started =========== 
+2022-04-08 23:53:59,988 - __init__.py[line:46] - DEBUG: [ray] Forcing OMP_NUM_THREADS=1 to avoid performance degradation with many workers (issue #6998). You can override this by explicitly setting OMP_NUM_THREADS.
+2022-04-08 23:54:03,093 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:54:04,294 - worker.py[line:817] - DEBUG: Automatically increasing RLIMIT_NOFILE to max value of 9223372036854775807
+2022-04-08 23:54:04,294 - worker.py[line:861] - INFO: Connecting to existing Ray cluster at address: 127.0.0.1:6379
+2022-04-08 23:54:04,630 - log.py[line:11] - INFO: =========== Ray engine prepared =========== 
+2022-04-08 23:54:04,631 - log.py[line:11] - INFO: =========== ModelProxy initialized=========== 
+2022-04-08 23:54:07,068 - log.py[line:11] - INFO: =========== Trainer started =========== 

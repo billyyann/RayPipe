@@ -34,7 +34,7 @@ class DistModelSaveCallBack(ModelCheckpoint):
         zip_dir(file_path,file_path+".zip")
 
         with open(file_path+".zip","rb") as f:
-            object_store_impl.upload(object_path,f)
+            object_store_impl.upload(object_path,f.read())
 
     def on_train_batch_end(self, batch, logs=None):
         if self._should_save_on_batch(batch):

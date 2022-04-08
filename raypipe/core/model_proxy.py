@@ -5,7 +5,7 @@ from raypipe.core import rpipe
 import tensorflow as tf
 
 from raypipe.core.data_model import LearningConfig
-from raypipe.core.rpipe.callback_func import DistModelSaveCallBack
+from raypipe.core.rpipe.callback import DistModelSaveCallBack
 from raypipe.core.rpipe.utils import build_ray_trainer
 
 

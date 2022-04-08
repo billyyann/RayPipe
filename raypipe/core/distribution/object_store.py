@@ -2,7 +2,6 @@ import os
 import uuid
 import base64
 from abc import ABC
-
 import sys
 
 from raypipe import logger
@@ -63,7 +62,7 @@ class FileSystemObjectStore(ObjectStore):
         #todo fix No such file or directory: '/tmp/object_store/95c3cae6-b4fc-11ec-bbfd/tmp/training'
         parent_path=os.path.dirname(object_path.get_path())
         if not os.path.exists(parent_path):
-            os.mkdir(parent_path)
+            os.makedirs( parent_path, exist_ok=True )
         with open(object_path.get_path()+".zip","wb") as f:
             f.write(file)
 

@@ -11,7 +11,7 @@ import ray.train as train
 from ray.train import Trainer
 import tensorflow as tf
 
-from raypipe.core.rpipe.callback_func import DistModelSaveCallBack
+from raypipe.core.rpipe.callback import DistModelSaveCallBack
 
 
 def mnist_dataset(batch_size):

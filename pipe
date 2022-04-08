@@ -1,0 +1,134 @@
+2022-04-08 23:46:00,705 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:46:03,101 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:46:03,895 - collective_all_reduce_strategy.py[line:329] - INFO: Enabled multi-worker collective ops with available devices: ['/job:worker/replica:0/task:0/device:CPU:0', '/job:worker/replica:0/task:0/device:XLA_CPU:0']
+2022-04-08 23:46:03,898 - mirrored_strategy.py[line:341] - INFO: Using MirroredStrategy with devices ('/job:worker/task:0',)
+2022-04-08 23:46:03,898 - collective_all_reduce_strategy.py[line:380] - INFO: MultiWorkerMirroredStrategy with cluster_spec = {'worker': ['127.0.0.1:55115']}, task_type = 'worker', task_id = 0, num_workers = 1, local_devices = ('/job:worker/task:0',), communication = CollectiveCommunication.AUTO
+2022-04-08 23:46:03,899 - log.py[line:11] - INFO: =========== strategy initialized =========== 
+2022-04-08 23:46:04,065 - log.py[line:11] - INFO: =========== Model built =========== 
+2022-04-08 23:46:04,494 - log.py[line:11] - INFO: =========== Dataset downloaded =========== 
+2022-04-08 23:46:04,880 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/data/ops/multi_device_iterator_ops.py:601: get_next_as_optional (from tensorflow.python.data.ops.iterator_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Iterator.get_next_as_optional()` instead.
+2022-04-08 23:46:05,585 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2022-04-08 23:46:05,589 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2022-04-08 23:46:06,028 - builder_impl.py[line:775] - INFO: Assets written to: /tmp/training/cp-0004.ckpt/assets
+2022-04-08 23:46:06,043 - log.py[line:11] - INFO: =========== Object Path /tmp/object_store/00838558-b753-11ec-b765/tmp/training/cp-0004.ckpt =========== 
+2022-04-08 23:47:54,676 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:47:57,623 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:47:58,445 - collective_all_reduce_strategy.py[line:329] - INFO: Enabled multi-worker collective ops with available devices: ['/job:worker/replica:0/task:0/device:CPU:0', '/job:worker/replica:0/task:0/device:XLA_CPU:0']
+2022-04-08 23:47:58,450 - mirrored_strategy.py[line:341] - INFO: Using MirroredStrategy with devices ('/job:worker/task:0',)
+2022-04-08 23:47:58,452 - collective_all_reduce_strategy.py[line:380] - INFO: MultiWorkerMirroredStrategy with cluster_spec = {'worker': ['127.0.0.1:55974']}, task_type = 'worker', task_id = 0, num_workers = 1, local_devices = ('/job:worker/task:0',), communication = CollectiveCommunication.AUTO
+2022-04-08 23:47:58,453 - log.py[line:11] - INFO: =========== strategy initialized =========== 
+2022-04-08 23:47:58,572 - log.py[line:11] - INFO: =========== Model built =========== 
+2022-04-08 23:47:59,045 - log.py[line:11] - INFO: =========== Dataset downloaded =========== 
+2022-04-08 23:47:59,444 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/data/ops/multi_device_iterator_ops.py:601: get_next_as_optional (from tensorflow.python.data.ops.iterator_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Iterator.get_next_as_optional()` instead.
+2022-04-08 23:48:00,255 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2022-04-08 23:48:00,260 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2022-04-08 23:48:00,736 - builder_impl.py[line:775] - INFO: Assets written to: /tmp/training/cp-0004.ckpt/assets
+2022-04-08 23:48:00,751 - log.py[line:11] - INFO: =========== Object Path /tmp/object_store/44e2ac42-b753-11ec-9e08/tmp/training/cp-0004.ckpt =========== 
+2022-04-08 23:48:01,230 - log.py[line:11] - INFO: =========== checkpoint saved to /tmp/object_store/44e2ac42-b753-11ec-9e08/tmp/training/cp-0004.ckpt =========== 
+2022-04-08 23:48:01,889 - builder_impl.py[line:775] - INFO: Assets written to: /tmp/training/cp-0007.ckpt/assets
+2022-04-08 23:48:01,904 - log.py[line:11] - INFO: =========== Object Path /tmp/object_store/45928cfc-b753-11ec-9e08/tmp/training/cp-0007.ckpt =========== 
+2022-04-08 23:48:02,385 - log.py[line:11] - INFO: =========== checkpoint saved to /tmp/object_store/45928cfc-b753-11ec-9e08/tmp/training/cp-0007.ckpt =========== 
+2022-04-08 23:48:03,029 - builder_impl.py[line:775] - INFO: Assets written to: /tmp/training/cp-0010.ckpt/assets
+2022-04-08 23:48:03,045 - log.py[line:11] - INFO: =========== Object Path /tmp/object_store/4640b584-b753-11ec-9e08/tmp/training/cp-0010.ckpt =========== 
+2022-04-08 23:48:03,528 - log.py[line:11] - INFO: =========== checkpoint saved to /tmp/object_store/4640b584-b753-11ec-9e08/tmp/training/cp-0010.ckpt =========== 
+2022-04-08 23:48:04,188 - builder_impl.py[line:775] - INFO: Assets written to: /tmp/training/cp-0014.ckpt/assets
+2022-04-08 23:48:04,203 - log.py[line:11] - INFO: =========== Object Path /tmp/object_store/46f15e7a-b753-11ec-9e08/tmp/training/cp-0014.ckpt =========== 
+2022-04-08 23:48:04,685 - log.py[line:11] - INFO: =========== checkpoint saved to /tmp/object_store/46f15e7a-b753-11ec-9e08/tmp/training/cp-0014.ckpt =========== 
+2022-04-08 23:49:33,268 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:49:36,507 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:49:37,585 - collective_all_reduce_strategy.py[line:329] - INFO: Enabled multi-worker collective ops with available devices: ['/job:worker/replica:0/task:0/device:CPU:0', '/job:worker/replica:0/task:0/device:XLA_CPU:0']
+2022-04-08 23:49:37,586 - mirrored_strategy.py[line:341] - INFO: Using MirroredStrategy with devices ('/job:worker/task:0',)
+2022-04-08 23:49:37,587 - collective_all_reduce_strategy.py[line:380] - INFO: MultiWorkerMirroredStrategy with cluster_spec = {'worker': ['127.0.0.1:56708']}, task_type = 'worker', task_id = 0, num_workers = 1, local_devices = ('/job:worker/task:0',), communication = CollectiveCommunication.AUTO
+2022-04-08 23:49:37,588 - log.py[line:11] - INFO: =========== strategy initialized =========== 
+2022-04-08 23:49:37,725 - log.py[line:11] - INFO: =========== Model built =========== 
+2022-04-08 23:49:38,187 - log.py[line:11] - INFO: =========== Dataset downloaded =========== 
+2022-04-08 23:49:38,733 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/data/ops/multi_device_iterator_ops.py:601: get_next_as_optional (from tensorflow.python.data.ops.iterator_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Iterator.get_next_as_optional()` instead.
+2022-04-08 23:49:39,704 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2022-04-08 23:49:39,714 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2022-04-08 23:49:40,387 - builder_impl.py[line:775] - INFO: Assets written to: /tmp/training/cp-0004.ckpt/assets
+2022-04-08 23:49:40,402 - log.py[line:11] - INFO: =========== Object Path /tmp/object_store/80481fce-b753-11ec-950c/tmp/training/cp-0004.ckpt =========== 
+2022-04-08 23:51:39,500 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:51:41,443 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:51:42,147 - collective_all_reduce_strategy.py[line:329] - INFO: Enabled multi-worker collective ops with available devices: ['/job:worker/replica:0/task:0/device:CPU:0', '/job:worker/replica:0/task:0/device:XLA_CPU:0']
+2022-04-08 23:51:42,149 - mirrored_strategy.py[line:341] - INFO: Using MirroredStrategy with devices ('/job:worker/task:0',)
+2022-04-08 23:51:42,150 - collective_all_reduce_strategy.py[line:380] - INFO: MultiWorkerMirroredStrategy with cluster_spec = {'worker': ['127.0.0.1:57641']}, task_type = 'worker', task_id = 0, num_workers = 1, local_devices = ('/job:worker/task:0',), communication = CollectiveCommunication.AUTO
+2022-04-08 23:51:42,150 - log.py[line:11] - INFO: =========== strategy initialized =========== 
+2022-04-08 23:51:42,246 - log.py[line:11] - INFO: =========== Model built =========== 
+2022-04-08 23:51:42,631 - log.py[line:11] - INFO: =========== Dataset downloaded =========== 
+2022-04-08 23:51:42,978 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/data/ops/multi_device_iterator_ops.py:601: get_next_as_optional (from tensorflow.python.data.ops.iterator_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Iterator.get_next_as_optional()` instead.
+2022-04-08 23:51:44,628 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2022-04-08 23:51:44,632 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2022-04-08 23:51:45,066 - builder_impl.py[line:775] - INFO: Assets written to: /tmp/training/cp-0004.ckpt/assets
+2022-04-08 23:51:45,081 - log.py[line:11] - INFO: =========== Object Path /tmp/object_store/ca98a35a-b753-11ec-b3de/tmp/training/cp-0004.ckpt =========== 
+2022-04-08 23:52:51,044 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:52:53,362 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:52:54,075 - collective_all_reduce_strategy.py[line:329] - INFO: Enabled multi-worker collective ops with available devices: ['/job:worker/replica:0/task:0/device:CPU:0', '/job:worker/replica:0/task:0/device:XLA_CPU:0']
+2022-04-08 23:52:54,076 - mirrored_strategy.py[line:341] - INFO: Using MirroredStrategy with devices ('/job:worker/task:0',)
+2022-04-08 23:52:54,077 - collective_all_reduce_strategy.py[line:380] - INFO: MultiWorkerMirroredStrategy with cluster_spec = {'worker': ['127.0.0.1:58182']}, task_type = 'worker', task_id = 0, num_workers = 1, local_devices = ('/job:worker/task:0',), communication = CollectiveCommunication.AUTO
+2022-04-08 23:52:54,077 - log.py[line:11] - INFO: =========== strategy initialized =========== 
+2022-04-08 23:52:54,184 - log.py[line:11] - INFO: =========== Model built =========== 
+2022-04-08 23:52:54,560 - log.py[line:11] - INFO: =========== Dataset downloaded =========== 
+2022-04-08 23:52:54,949 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/data/ops/multi_device_iterator_ops.py:601: get_next_as_optional (from tensorflow.python.data.ops.iterator_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Iterator.get_next_as_optional()` instead.
+2022-04-08 23:52:55,707 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2022-04-08 23:52:55,710 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2022-04-08 23:52:56,140 - builder_impl.py[line:775] - INFO: Assets written to: /tmp/training/cp-0004.ckpt/assets
+2022-04-08 23:52:56,154 - log.py[line:11] - INFO: =========== Object Path /tmp/object_store/f4f597e8-b753-11ec-92e4/tmp/training/cp-0004.ckpt =========== 
+2022-04-08 23:54:08,619 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:54:12,155 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-08 23:54:13,400 - collective_all_reduce_strategy.py[line:329] - INFO: Enabled multi-worker collective ops with available devices: ['/job:worker/replica:0/task:0/device:CPU:0', '/job:worker/replica:0/task:0/device:XLA_CPU:0']
+2022-04-08 23:54:13,403 - mirrored_strategy.py[line:341] - INFO: Using MirroredStrategy with devices ('/job:worker/task:0',)
+2022-04-08 23:54:13,403 - collective_all_reduce_strategy.py[line:380] - INFO: MultiWorkerMirroredStrategy with cluster_spec = {'worker': ['127.0.0.1:58762']}, task_type = 'worker', task_id = 0, num_workers = 1, local_devices = ('/job:worker/task:0',), communication = CollectiveCommunication.AUTO
+2022-04-08 23:54:13,406 - log.py[line:11] - INFO: =========== strategy initialized =========== 
+2022-04-08 23:54:13,552 - log.py[line:11] - INFO: =========== Model built =========== 
+2022-04-08 23:54:14,027 - log.py[line:11] - INFO: =========== Dataset downloaded =========== 
+2022-04-08 23:54:14,490 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/data/ops/multi_device_iterator_ops.py:601: get_next_as_optional (from tensorflow.python.data.ops.iterator_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Iterator.get_next_as_optional()` instead.
+2022-04-08 23:54:15,292 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2022-04-08 23:54:15,295 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2022-04-08 23:54:15,807 - builder_impl.py[line:775] - INFO: Assets written to: /tmp/training/cp-0004.ckpt/assets
+2022-04-08 23:54:15,821 - log.py[line:11] - INFO: =========== Object Path /tmp/object_store/2471d4b4-b754-11ec-9081/tmp/training/cp-0004.ckpt =========== 
+2022-04-08 23:54:16,277 - log.py[line:11] - INFO: =========== checkpoint saved to /tmp/object_store/2471d4b4-b754-11ec-9081/tmp/training/cp-0004.ckpt =========== 
+2022-04-08 23:54:16,918 - builder_impl.py[line:775] - INFO: Assets written to: /tmp/training/cp-0007.ckpt/assets
+2022-04-08 23:54:16,934 - log.py[line:11] - INFO: =========== Object Path /tmp/object_store/251ba1d8-b754-11ec-9081/tmp/training/cp-0007.ckpt =========== 
+2022-04-08 23:54:17,420 - log.py[line:11] - INFO: =========== checkpoint saved to /tmp/object_store/251ba1d8-b754-11ec-9081/tmp/training/cp-0007.ckpt =========== 
+2022-04-08 23:54:18,022 - builder_impl.py[line:775] - INFO: Assets written to: /tmp/training/cp-0010.ckpt/assets
+2022-04-08 23:54:18,036 - log.py[line:11] - INFO: =========== Object Path /tmp/object_store/25c3c746-b754-11ec-9081/tmp/training/cp-0010.ckpt =========== 
+2022-04-08 23:54:18,487 - log.py[line:11] - INFO: =========== checkpoint saved to /tmp/object_store/25c3c746-b754-11ec-9081/tmp/training/cp-0010.ckpt =========== 
+2022-04-08 23:54:19,104 - builder_impl.py[line:775] - INFO: Assets written to: /tmp/training/cp-0014.ckpt/assets
+2022-04-08 23:54:19,118 - log.py[line:11] - INFO: =========== Object Path /tmp/object_store/2668d470-b754-11ec-9081/tmp/training/cp-0014.ckpt =========== 
+2022-04-08 23:54:19,564 - log.py[line:11] - INFO: =========== checkpoint saved to /tmp/object_store/2668d470-b754-11ec-9081/tmp/training/cp-0014.ckpt =========== 
