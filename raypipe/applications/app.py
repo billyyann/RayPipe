@@ -4,13 +4,16 @@ from typing import Callable,Any
 from fastapi.responses import ORJSONResponse
 from fastapi import Request
 import orjson
-#todo
+
+from raypipe.config import FASTAPI_DEBUG
+
 """
 include sql
 design interface
 test @serve.deployment(name="demo", route_prefix="/demo", version="v1")
 @serve.ingress(app)
 """
+
 
 class ORJSONRequest(Request):
     """
@@ -99,7 +102,7 @@ def create_app() -> FastAPI:
     ]
 
     app = FastAPI(
-        debug=settings.debug,
+        debug=FASTAPI_DEBUG,
         routes=routes,  # type: ignore
         default_response_class=ORJSONResponse,
         exception_handlers=_EXCEPTION_HANDLERS,  # type: ignore

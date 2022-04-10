@@ -11,6 +11,7 @@ class RayConfig(BaseModel):
 
 class TrainerConfig(BaseModel):
     backend:str
+    type:str
     num_workers:int
     use_gpu: bool
 

@@ -132,3 +132,33 @@ This property should not be used in TensorFlow 2.0, as updates are applied autom
 2022-04-08 23:54:19,104 - builder_impl.py[line:775] - INFO: Assets written to: /tmp/training/cp-0014.ckpt/assets
 2022-04-08 23:54:19,118 - log.py[line:11] - INFO: =========== Object Path /tmp/object_store/2668d470-b754-11ec-9081/tmp/training/cp-0014.ckpt =========== 
 2022-04-08 23:54:19,564 - log.py[line:11] - INFO: =========== checkpoint saved to /tmp/object_store/2668d470-b754-11ec-9081/tmp/training/cp-0014.ckpt =========== 
+2022-04-10 11:49:29,433 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-10 11:50:01,636 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-10 11:50:05,076 - tpu_cluster_resolver.py[line:35] - DEBUG: Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2022-04-10 11:50:06,602 - collective_all_reduce_strategy.py[line:329] - INFO: Enabled multi-worker collective ops with available devices: ['/job:worker/replica:0/task:0/device:CPU:0', '/job:worker/replica:0/task:0/device:XLA_CPU:0']
+2022-04-10 11:50:06,603 - mirrored_strategy.py[line:341] - INFO: Using MirroredStrategy with devices ('/job:worker/task:0',)
+2022-04-10 11:50:06,604 - collective_all_reduce_strategy.py[line:380] - INFO: MultiWorkerMirroredStrategy with cluster_spec = {'worker': ['127.0.0.1:62635']}, task_type = 'worker', task_id = 0, num_workers = 1, local_devices = ('/job:worker/task:0',), communication = CollectiveCommunication.AUTO
+2022-04-10 11:50:06,604 - log.py[line:11] - INFO: =========== strategy initialized =========== 
+2022-04-10 11:50:06,707 - log.py[line:11] - INFO: =========== Model built =========== 
+2022-04-10 11:50:07,154 - log.py[line:11] - INFO: =========== Dataset downloaded =========== 
+2022-04-10 11:50:07,607 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/data/ops/multi_device_iterator_ops.py:601: get_next_as_optional (from tensorflow.python.data.ops.iterator_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Iterator.get_next_as_optional()` instead.
+2022-04-10 11:50:10,524 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Model.state_updates (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2022-04-10 11:50:10,527 - deprecation.py[line:323] - WARNING: From /Users/4paradigm/opt/miniconda3/envs/p37/lib/python3.7/site-packages/tensorflow/python/training/tracking/tracking.py:111: Layer.updates (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+This property should not be used in TensorFlow 2.0, as updates are applied automatically.
+2022-04-10 11:50:10,979 - builder_impl.py[line:775] - INFO: Assets written to: /tmp/training/cp-0004.ckpt/assets
+2022-04-10 11:50:10,999 - log.py[line:11] - INFO: =========== Object Path /tmp/object_store/522375b0-b881-11ec-b0be/tmp/training/cp-0004.ckpt =========== 
+2022-04-10 11:50:11,462 - log.py[line:11] - INFO: =========== checkpoint saved to /tmp/object_store/522375b0-b881-11ec-b0be/tmp/training/cp-0004.ckpt =========== 
+2022-04-10 11:50:12,089 - builder_impl.py[line:775] - INFO: Assets written to: /tmp/training/cp-0007.ckpt/assets
+2022-04-10 11:50:12,108 - log.py[line:11] - INFO: =========== Object Path /tmp/object_store/52ccb922-b881-11ec-b0be/tmp/training/cp-0007.ckpt =========== 
+2022-04-10 11:50:12,577 - log.py[line:11] - INFO: =========== checkpoint saved to /tmp/object_store/52ccb922-b881-11ec-b0be/tmp/training/cp-0007.ckpt =========== 
+2022-04-10 11:50:13,202 - builder_impl.py[line:775] - INFO: Assets written to: /tmp/training/cp-0010.ckpt/assets
+2022-04-10 11:50:13,218 - log.py[line:11] - INFO: =========== Object Path /tmp/object_store/53762ebc-b881-11ec-b0be/tmp/training/cp-0010.ckpt =========== 
+2022-04-10 11:50:13,679 - log.py[line:11] - INFO: =========== checkpoint saved to /tmp/object_store/53762ebc-b881-11ec-b0be/tmp/training/cp-0010.ckpt =========== 
+2022-04-10 11:50:14,434 - builder_impl.py[line:775] - INFO: Assets written to: /tmp/training/cp-0014.ckpt/assets
+2022-04-10 11:50:14,453 - log.py[line:11] - INFO: =========== Object Path /tmp/object_store/54328be8-b881-11ec-b0be/tmp/training/cp-0014.ckpt =========== 
+2022-04-10 11:50:14,926 - log.py[line:11] - INFO: =========== checkpoint saved to /tmp/object_store/54328be8-b881-11ec-b0be/tmp/training/cp-0014.ckpt =========== 

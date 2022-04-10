@@ -13,7 +13,12 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/billyyann/RayPipe",
     packages=setuptools.find_packages(),
-    install_requires=['tensorflow-cpu==2.3.0'],
+    install_requires=[
+        'ray==1.11.0',
+        'sqlalchemy==1.4.35',
+        'tensorflow-cpu==2.3.0',
+        'pymysql==1.0.2'
+        ],
     entry_points={
         'console_scripts': [
         ],

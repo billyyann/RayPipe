@@ -16,10 +16,10 @@ def start_ray(ray_config:RayConfig):
     except:
         ray.init()
 
-def build_ray_trainer(trainer_cfg:TrainerConfig):
-    return  Trainer(backend=trainer_cfg.backend,
-                    num_workers=trainer_cfg.num_workers,
-                    use_gpu=trainer_cfg.use_gpu)
+def build_ray_trainer(trainer_config:TrainerConfig):
+    return  Trainer(backend=trainer_config.backend,
+                    num_workers=trainer_config.num_workers,
+                    use_gpu=trainer_config.use_gpu)
 
 
 def zip_dir(dirpath, zip_name):

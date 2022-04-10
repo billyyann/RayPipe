@@ -1,12 +1,12 @@
-import os
 
 from raypipe import logger
 from raypipe.core import rpipe
-import tensorflow as tf
+
 
 from raypipe.core.data_model import LearningConfig
-from raypipe.core.rpipe.callback import DistModelSaveCallBack
+
 from raypipe.core.rpipe.utils import build_ray_trainer
+from raypipe.core.train_template import keras_train_template
 
 
 @rpipe.init
@@ -21,11 +21,22 @@ class ModelProxy:
 
         self.model_strategy_func = model_strategy_func
         self.data_generator_func=data_generator_func
-
+        self._train_template=self.select_train_template(self._trainer_config.type)
         self.ray_trainer = build_ray_trainer(self._trainer_config)
 
         if not self.ray_trainer: raise NotImplementedError("Trainer not built.")
         self.initialized=True
+
+    @staticmethod
+    def select_train_template(t_type:str):
+        """
+        to extend trainer template here
+        eg. keras, pytorch, tf1, tf2, simulation, optimization
+        :param t_type:
+        :return:
+        """
+        if t_type=="keras":
+            return keras_train_template
 
     @rpipe.is_init
     def _validate_env(self):
@@ -48,38 +59,6 @@ class ModelProxy:
     def local_eval(self):
         pass
 
-    def _train_template(self,general_config):
-        learning_config=general_config.get("learning_config")
-        trainer_config = general_config.get("trainer_config")
-        data_cfg= general_config.get("data_cfg")
-
-        strategy = tf.distribute.experimental.MultiWorkerMirroredStrategy()
-        logger.info('=========== strategy initialized =========== ')
-
-        with strategy.scope():
-            multi_worker_model = self.model_strategy_func(learning_config.dict())
-
-        logger.info('=========== Model built =========== ')
-
-        global_batch_size = learning_config.batch_size * trainer_config.num_workers
-        batch_dataset = self.data_generator_func(data_cfg,global_batch_size)
-
-        logger.info('=========== Dataset downloaded =========== ')
-
-        if not os.path.exists("/tmp/training"):
-            os.mkdir("/tmp/training")
-
-        epoch_call_back=DistModelSaveCallBack(save_freq=learning_config.batch_size,
-                                              verbose=1)
-        history = multi_worker_model.fit(
-            batch_dataset,
-            epochs=learning_config.epochs,
-            steps_per_epoch=learning_config.steps_per_epoch,
-            callbacks=[epoch_call_back])
-
-        results = history.history
-        return results
-
     def submit(self):
         """
         :return:
@@ -88,12 +67,16 @@ class ModelProxy:
         self.ray_trainer.start()
         logger.info('=========== Trainer started =========== ')
 
+
         self.ray_trainer.run(
             train_func=self._train_template,
             config={
                     "learning_config":self._learning_config,
                     "trainer_config":self._trainer_config,
-                    "data_cfg":self._data_cfg}
+                    "data_cfg":self._data_cfg,
+                    "model_strategy_func": self.model_strategy_func ,
+                    "data_generator_func": self.data_generator_func
+                    }
             )
 
     def upload(self):

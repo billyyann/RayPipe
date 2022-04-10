@@ -13,6 +13,7 @@ class CNNTester(unittest.TestCase):
             },
             "trainer_cfg":{
                 "backend":"tensorflow",
+                "type":"keras",
                 "num_workers":1,
                 "use_gpu":False
             },
