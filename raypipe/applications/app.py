@@ -1,10 +1,13 @@
 from fastapi.routing import APIRoute as FastAPIRoute
-from fastapi import FastAPI, Request, Response
-from typing import Callable,Any
+from fastapi import FastAPI, Request, Response,status
+from typing import Callable, Any, Optional
 from fastapi.responses import ORJSONResponse
 from fastapi import Request
 import orjson
 
+from exceptions import _EXCEPTION_HANDLERS
+from sql import endpoints
+from sql.database import Base,engine
 from raypipe.config import FASTAPI_DEBUG
 
 """
@@ -26,6 +29,9 @@ class ORJSONRequest(Request):
             self._json = orjson.loads(body)
         return self._json
 
+
+
+
 class APIRoute(FastAPIRoute):
     """
     Custom route to use ORJSONRequest handler.
@@ -41,65 +47,60 @@ class APIRoute(FastAPIRoute):
         return custom_route_handler
 
 
+
 def create_app() -> FastAPI:
     routes = [
-        # Model ready
         APIRoute(
-            "/v2/models/{model_name}/ready",
-            endpoints.model_ready,
+            "/",
+            endpoints.index,
+            methods=["GET"],
         ),
         APIRoute(
-            "/v2/models/{model_name}/versions/{model_version}/ready",
-            endpoints.model_ready,
+            "/v1/models/{exp_id}",
+            endpoints.get_models,
+            methods = ["GET"],
         ),
-        # Model infer
         APIRoute(
-            "/v2/models/{model_name}/infer",
-            endpoints.infer,
+            "/v1/model/{model_id}",
+            endpoints.get_model,
+            methods=["GET"],
+        ),
+        APIRoute(
+            "/v2/model",
+            endpoints.add_model,
             methods=["POST"],
         ),
         APIRoute(
-            "/v2/models/{model_name}/versions/{model_version}/infer",
-            endpoints.infer,
+            "/v1/algos",
+            endpoints.get_algorithms,
+            methods=["GET"],
+        ),
+        APIRoute(
+            "/v1/algo",
+            endpoints.add_algorithm,
             methods=["POST"],
         ),
-        # Model metadata
         APIRoute(
-            "/v2/models/{model_name}",
-            endpoints.model_metadata,
+            "/v1/experiments/{algo_id}",
+            endpoints.get_experiments,
+            methods=["GET"],
         ),
         APIRoute(
-            "/v2/models/{model_name}/versions/{model_version}",
-            endpoints.model_metadata,
+            "/v1/experiment/{exp_id}",
+            endpoints.get_experiment,
+            methods=["GET"],
         ),
-        # Liveness and readiness
-        APIRoute("/v2/health/live", endpoints.live),
-        APIRoute("/v2/health/ready", endpoints.ready),
-        # Server metadata
         APIRoute(
-            "/v2",
-            endpoints.metadata,
-        ),
+            "/v2/experiment",
+            endpoints.add_experiment,
+            methods=["POST"],
+        )
     ]
 
     routes += [
-        # Model Repository API
-        APIRoute(
-            "/v2/repository/index",
-            model_repository_endpoints.index,
-            methods=["POST"],
-        ),
-        APIRoute(
-            "/v2/repository/models/{model_name}/load",
-            model_repository_endpoints.load,
-            methods=["POST"],
-        ),
-        APIRoute(
-            "/v2/repository/models/{model_name}/unload",
-            model_repository_endpoints.unload,
-            methods=["POST"],
-        ),
     ]
+
+    Base.metadata.create_all(bind=engine)
 
     app = FastAPI(
         debug=FASTAPI_DEBUG,

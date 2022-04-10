@@ -1,10 +1,10 @@
 from typing import Dict
-from raypipe.applications.base import BaseNN
+from raypipe.core.models.base import BaseModel
 import tensorflow as tf
 import numpy as np
 
 
-class CNN(BaseNN):
+class CNN(BaseModel):
     def model_strategy_func(self,learning_cfg:Dict):
         learning_rate = learning_cfg.get("lr",0.001)
 

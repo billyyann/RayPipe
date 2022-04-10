@@ -1,7 +1,7 @@
 from raypipe.core.model_proxy import ModelProxy
 
 
-class BaseNN(object):
+class BaseModel(object):
     def model_strategy_func(self):
         raise NotImplementedError("Please implement model strategy")
 

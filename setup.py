@@ -14,6 +14,7 @@ setuptools.setup(
     url="https://github.com/billyyann/RayPipe",
     packages=setuptools.find_packages(),
     install_requires=[
+        "uvicorn==0.17.6",
         'ray==1.11.0',
         'sqlalchemy==1.4.35',
         'tensorflow-cpu==2.3.0',
