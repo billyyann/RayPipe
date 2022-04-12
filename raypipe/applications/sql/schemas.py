@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Dict
 
 from pydantic import BaseModel, validator
 from datetime import datetime
@@ -6,7 +6,7 @@ from datetime import datetime
 
 class Algorithm(BaseModel):
     id:Optional[int]
-    model_name:str
+    algorithm_name:str
     create_time: datetime = None
     update_time: datetime = None
 
@@ -21,8 +21,8 @@ class Algorithm(BaseModel):
 
 class TrainExperiment(BaseModel):
     id:Optional[int]
-    algorithm_id:int
-    train_params:str
+    algorithm_name:str
+    train_params:Dict
     create_time: datetime = None
     update_time: datetime = None
 

@@ -1,5 +1,5 @@
 from typing import Dict
-from raypipe.core.models.base import BaseModel
+from raypipe.core.algos.base import BaseModel
 import tensorflow as tf
 import numpy as np
 

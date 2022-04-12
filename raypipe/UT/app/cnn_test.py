@@ -1,10 +1,13 @@
 import unittest
 
-from raypipe.core.models.cnn import CNN
+from raypipe.core.algos.cnn import CNN
 
 class CNNTester(unittest.TestCase):
     def test_cnn_remote_train(self):
         general_cfg={
+            "algorithm_cfg":{
+                "name":CNN
+            },
             "ray_cfg":{
                 "address":'127.0.0.1:6379',
                 # "address":"ray://172.27.69.28:32071",

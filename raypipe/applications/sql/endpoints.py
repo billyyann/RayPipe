@@ -3,6 +3,7 @@ from .database import SessionLocal, engine, Base
 from .schemas import Algorithm, TrainExperiment, Model
 from sqlalchemy.orm import Session
 from . import crud
+import importlib
 
 # Dependency
 def get_db():
@@ -30,6 +31,14 @@ def get_experiments( algo_id:int,db: Session = Depends(get_db)):
     return crud.get_all_experiments_via_algo(db=db, algo_id=algo_id)
 
 def add_experiment(exp: TrainExperiment, db: Session = Depends(get_db)):
+
+    try:
+        op=importlib.import_module('raypipe.core.algos.{}'.format(exp.algorithm_name))
+        op=op(**exp.train_params)
+        op.train(method="remote")
+    except Exception as err:
+        print('add_experiment Error:', err)
+
     return crud.db_create_exp(db=db,exp=exp)
 
 def get_model( model_id: int,db: Session = Depends(get_db)):

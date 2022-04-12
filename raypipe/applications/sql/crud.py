@@ -19,7 +19,7 @@ def get_algorithm(db: Session):
 
 def db_create_algo(db: Session, algo: schemas.Algorithm):
     db_algo = models.Algorithm(
-        model_name =algo.model_name,
+        algorithm_name =algo.algorithm_name,
     )
     db.add(db_algo)
     db.commit()  # 提交保存到数据库中
@@ -34,7 +34,7 @@ def get_all_experiments_via_algo(db: Session, algo_id:int):
 
 def db_create_exp(db: Session, exp: schemas.TrainExperiment):
     db_exp = models.TrainExperiment(
-         algorithm_id=exp.algorithm_id,
+        algorithm_name=exp.algorithm_name,
         train_params=exp.train_params
     )
     db.add(db_exp)

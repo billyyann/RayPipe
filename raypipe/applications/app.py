@@ -56,7 +56,7 @@ def create_app() -> FastAPI:
             methods=["GET"],
         ),
         APIRoute(
-            "/v1/models/{exp_id}",
+            "/v1/algos/{exp_id}",
             endpoints.get_models,
             methods = ["GET"],
         ),
